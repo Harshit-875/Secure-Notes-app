@@ -18,7 +18,7 @@ router.post('/addnote', fetchuser, [
 try{
 
     const {title,description,tag}=req.body
-    // If there are errors , return BAd request and the errors
+    // If there are errors , return` BAd request and the errors
     const errors=validationResult(req)
     if(!errors.isEmpty()){
         return res.status(400).json({errors:errors.array()});
