@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser')
 
-const JWT_SECRET = "your_secret_key"; // Define this properly (use environment variables in production)
+const JWT_SECRET = process.env.JWT_SECRET; // Define this properly (use environment variables in production)
 
 // Create a user using: POST "/api/auth/createuser". Doesn't require Auth
 router.post('/createuser', [

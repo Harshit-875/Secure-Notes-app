@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const mongoURI = "mongodb://127.0.0.1:27017/iNotebook"; // Make sure you have a database name
+const mongoURI = process.env.MONGODB_URI; // Make sure you have a database name
 
 const connectToMongo = async () => {
     try {
